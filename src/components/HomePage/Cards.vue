@@ -3,52 +3,54 @@
     <h2 class="text-3xl">Het beste voor u, van boer tot boon</h2>
   </div>
   <div class="flex justify-evenly">
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card w-80 shadow-xl drop-shadow-xl">
       <figure class="px-10 pt-5">
-        <img
-          src="https://placeimg.com/400/225/arch"
-          alt="Shoes"
-          class="rounded-full w-32 h-32"
-        />
+        <div
+          class="rounded-full w-24 h-24 flex justify-center items-center custom-bg-secondary"
+        >
+          <i
+            class="fa-solid fa-hand-holding-seedling text-5xl color-primary"
+          ></i>
+        </div>
       </figure>
       <div class="card-body items-center text-center">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
+        <h2 class="card-title">Eerlijk</h2>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+        </p>
       </div>
     </div>
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card w-80 shadow-xl drop-shadow-xl">
       <figure class="px-10 pt-5">
-        <img
-          src="https://placeimg.com/400/225/arch"
-          alt="Shoes"
-          class="rounded-full w-32 h-32"
-        />
-      </figure>
-      <div class="card-body items-center text-center">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions">
-          <button class="btn btn-primary">Buy Now</button>
+        <div
+          class="rounded-full w-24 h-24 flex justify-center items-center custom-bg-secondary"
+        >
+          <i class="fa-solid fa-coffee-beans text-5xl color-primary"></i>
         </div>
+      </figure>
+      <div class="card-body items-center text-center text-white">
+        <h2 class="card-title">Kwaliteit</h2>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+        </p>
       </div>
     </div>
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card w-80 shadow-xl drop-shadow-xl">
       <figure class="px-10 pt-5">
-        <img
-          src="https://placeimg.com/400/225/arch"
-          alt="Shoes"
-          class="rounded-full w-32 h-32"
-        />
+        <div
+          class="rounded-full w-24 h-24 flex justify-center items-center custom-bg-secondary"
+        >
+          <i class="fa-solid fa-truck-fast text-5xl color-primary"></i>
+        </div>
       </figure>
       <div class="card-body items-center text-center">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
+        <h2 class="card-title">Snel</h2>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+        </p>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
     <div class="mb-20">
       <Hero />
     </div>
-    <div class="my-20">
+    <div class="mt-20">
       <Cards />
     </div>
   </div>
