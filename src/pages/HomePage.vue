@@ -1,7 +1,11 @@
 <template>
   <div class="container">
-    <Hero />
-    <Cards />
+    <div class="mb-20">
+      <Hero />
+    </div>
+    <div class="my-20">
+      <Cards />
+    </div>
   </div>
 </template>
 

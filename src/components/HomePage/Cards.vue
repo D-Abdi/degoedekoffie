@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center text-white">
-    <h2>Het beste voor u, van boer tot boon</h2>
+  <div class="flex justify-center text-white my-16">
+    <h2 class="text-3xl">Het beste voor u, van boer tot boon</h2>
   </div>
   <div class="flex justify-evenly">
     <div class="card w-96 bg-base-100 shadow-xl">
