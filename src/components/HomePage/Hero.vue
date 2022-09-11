@@ -204,7 +204,7 @@
         src="../../assets/images/logo.png"
         alt="Goede koffie logo"
         class="absolute"
-        style="width: 850px; top: -25%; left: 10%"
+        style="width: 850px; top: -20%; left: 10%"
       />.
     </div>
   </div>
