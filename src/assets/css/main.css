@@ -8,11 +8,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Verdana, sans-serif;
 }
 
-.color-primary {
+.custom-color-primary {
   color: #2c2d33;
 }
 
-.color-secondary {
+.custom-color-secondary {
   color: #d1a160;
 }
 

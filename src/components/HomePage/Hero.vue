@@ -5,7 +5,7 @@
         class="relative z-10 custom-bg-primary pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32"
       >
         <svg
-          class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block color-primary"
+          class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block custom-color-primary"
           fill="currentColor"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
@@ -164,7 +164,7 @@
               class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-5xl"
             >
               <span class="block">Goede koffie</span>
-              <span class="block color-secondary xl:inline"
+              <span class="block custom-color-secondary xl:inline"
                 >voor een eerlijke prijs</span
               >
             </h1>
