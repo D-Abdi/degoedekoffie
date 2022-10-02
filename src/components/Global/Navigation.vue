@@ -155,73 +155,13 @@
             </div>
           </div>
         </div>
-
-        <main
-          class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
-        >
-          <div class="sm:text-center lg:text-left">
-            <h1
-              class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-5xl"
-            >
-              <span class="block">Goede koffie</span>
-              <span class="block custom-color-secondary xl:inline"
-                >voor een eerlijke prijs</span
-              >
-            </h1>
-            <p
-              class="mt-3 text-base text-gray-400 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0"
-            >
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
-            </p>
-            <div
-              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
-            >
-              <div class="rounded-md shadow">
-                <a
-                  href="#"
-                  class="flex w-full items-center justify-center rounded-md border border-transparent custom-bg-secondary px-8 py-3 text-base font-medium text-white md:py-4 md:px-6 md:text-lg hero-btn"
-                  ><font-awesome-icon
-                    :icon="['fas', 'mug-hot']"
-                    class="text-2xl mr-1.5"
-                  />
-                  Bekijk ons aanbod</a
-                >
-              </div>
-            </div>
-          </div>
-        </main>
       </div>
-    </div>
-    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img
-        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full opacity-50"
-        src="../../assets/images/banner.jpg"
-        alt="Banner showing coffee"
-      />
-      <img
-        src="../../assets/images/logo.png"
-        alt="Goede koffie logo"
-        class="absolute"
-        style="width: 850px; top: -20%; left: 10%"
-      />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Hero",
-  data() {
-    return {
-      menuVisible: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.menuVisible = !this.menuVisible;
-    },
-  },
+  name: "Nav",
 };
 </script>

@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
+import { Routes } from "./router/Routes";
 import "./style.css";
 import "./assets/css/main.css";
 
@@ -8,7 +9,7 @@ import App from "./App.vue";
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{ path: "/", name: "Home", component: Home }],
+  routes: Routes,
 });
 
 createApp(App).use(router).mount("#app");
