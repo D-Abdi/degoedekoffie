@@ -65,7 +65,7 @@
 
                 <a
                   @click="this.$router.push('/products')"
-                  class="hero-link font-medium text-white"
+                  class="hero-link font-medium text-white cursor-pointer"
                   >Koffiebonen</a
                 >
 
