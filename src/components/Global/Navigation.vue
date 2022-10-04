@@ -61,9 +61,19 @@
                 </div>
               </div>
               <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                <a href="#" class="hero-link font-medium text-white">Home</a>
+                <a
+                  href="#"
+                  class="hero-link font-medium text-white"
+                  :class="{ 'active-link': this.$route.name === 'Home' }"
+                  @click="this.$router.push('/')"
+                  >Home</a
+                >
 
-                <a href="#" class="hero-link font-medium text-white"
+                <a
+                  href="#"
+                  class="hero-link font-medium text-white"
+                  :class="{ 'active-link': this.$route.name === 'Products' }"
+                  @click="this.$router.push('/products')"
                   >Koffiebonen</a
                 >
 
@@ -163,5 +173,8 @@
 <script>
 export default {
   name: "Nav",
+  mounted() {
+    console.log(this.$route, "Route");
+  },
 };
 </script>

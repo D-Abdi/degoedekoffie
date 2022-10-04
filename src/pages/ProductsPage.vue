@@ -4,6 +4,9 @@
       <Navigation />
     </div>
     <div>
+      <ProductsTitle />
+    </div>
+    <div>
       <ProductsGrid />
     </div>
   </div>
@@ -11,12 +14,14 @@
 
 <script>
 import Navigation from "../components/Global/Navigation.vue";
+import ProductsTitle from "../components/ProductsPage/ProductsTitle.vue";
 import ProductsGrid from "../components/ProductsPage/ProductsGrid.vue";
 
 export default {
   name: "ProductsPage",
   components: {
     Navigation,
+    ProductsTitle,
     ProductsGrid,
   },
 };
