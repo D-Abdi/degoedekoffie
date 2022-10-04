@@ -61,7 +61,7 @@
                 </div>
               </div>
               <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                <a href="#" class="hero-link font-medium text-white">Home</a>
+                <a href="#" class="active-link font-medium text-white">Home</a>
 
                 <a href="#" class="hero-link font-medium text-white"
                   >Koffiebonen</a
