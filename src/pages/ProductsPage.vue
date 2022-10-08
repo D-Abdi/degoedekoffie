@@ -9,6 +9,9 @@
     <div>
       <ProductsGrid />
     </div>
+    <div class="mt-20">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,7 @@
 import Navigation from "../components/Global/Navigation.vue";
 import ProductsTitle from "../components/ProductsPage/ProductsTitle.vue";
 import ProductsGrid from "../components/ProductsPage/ProductsGrid.vue";
+import Footer from "../components/Global/Footer.vue";
 
 export default {
   name: "ProductsPage",
@@ -23,6 +27,7 @@ export default {
     Navigation,
     ProductsTitle,
     ProductsGrid,
+    Footer,
   },
 };
 </script>

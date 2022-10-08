@@ -13,7 +13,7 @@
       </div>
       <div class="flex flex-wrap -m-4 justify-evenly">
         <div class="xl:w-1/4 md:w-1/2 p-4">
-          <div class="bg-neutral shadow-xl drop-shadow-xl p-6 rounded-lg">
+          <div class="bg- shadow-xl drop-shadow-xl p-6 rounded-lg">
             <img
               class="h-40 rounded w-full object-cover object-center mb-6"
               src="https://dummyimage.com/720x400"
