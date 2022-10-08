@@ -9,7 +9,7 @@
         />
       </figure>
       <div class="card-body items-center text-center">
-        <h2 class="card-title">Ecuador</2>
+        <h2 class="card-title">Ecuador</h2>
         <img
           src="src\assets\images\coffee-bag.jpg"
           alt="A coffee bag surrounded by coffee beans."
