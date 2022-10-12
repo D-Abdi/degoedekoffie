@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { Routes } from "./router/Routes";
+import { MotionPlugin } from "@vueuse/motion";
 import "./style.css";
 import "./assets/css/main.css";
 
@@ -12,4 +13,4 @@ const router = createRouter({
   routes: Routes,
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).use(MotionPlugin).mount("#app");
