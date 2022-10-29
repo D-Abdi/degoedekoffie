@@ -70,10 +70,13 @@
                 >
 
                 <a href="#" class="hero-link font-medium text-white"
+                @click="this.$router.push('/about')"
                   >Over ons</a
                 >
 
-                <a href="#" class="hero-link font-medium text-white">Contact</a>
+                <a href="#" class="hero-link font-medium text-white"
+                @click="this.$router.push('/contact')"
+                >Contact</a>
               </div>
             </nav>
           </div>
