@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto max-w-7xl">
         <Navigation />
-        <h1>About Page</h1>
+        <h1>Contact Page</h1>
         <Footer />
     </div>
 </template>
@@ -11,7 +11,7 @@ import Navigation from "../../components/Global/Navigation.vue";
 import Footer from "../../components/Global/Footer.vue";
 
 export default {
-    name: "About",
+    name: "Contact",
     components: {
         Navigation,
         Footer

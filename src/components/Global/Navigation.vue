@@ -89,7 +89,7 @@
                   href="#" 
                   class="hero-link font-medium text-white"
                   :class="{ 'active-link': this.$route.name === 'Contact' }"
-                  @click="this.$router.push('/about')"
+                  @click="this.$router.push('/contact')"
                 >Contact</a>
               </div>
             </nav>
