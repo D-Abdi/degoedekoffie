@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-gray-600">
+  <footer class="text-gray-600 mt-20">
     <div
       class="px-5 mx-auto max-w-7xl grid grid-cols-5 text-center items-center justify-items-center"
     >

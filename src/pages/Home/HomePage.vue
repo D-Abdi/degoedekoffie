@@ -19,12 +19,12 @@
 </template>
 
 <script lang="ts">
-import Navigation from "../components/Global/Navigation.vue";
-import Hero from "../components/HomePage/Hero.vue";
-import Cards from "../components/HomePage/Cards.vue";
-import Testimonial from "../components/HomePage/Testimonial.vue";
-import Products from "../components/HomePage/Products.vue";
-import Footer from "../components/Global/Footer.vue";
+import Navigation from "../../components/Global/Navigation.vue";
+import Hero from "../../components/HomePage/Hero.vue";
+import Cards from "../../components/HomePage/Cards.vue";
+import Testimonial from "../../components/HomePage/Testimonial.vue";
+import Products from "../../components/HomePage/Products.vue";
+import Footer from "../../components/Global/Footer.vue";
 
 export default {
   name: "HomePage",

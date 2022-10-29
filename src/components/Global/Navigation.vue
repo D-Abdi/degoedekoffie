@@ -72,12 +72,15 @@
                 <a
                   href="#"
                   class="hero-link font-medium text-white"
-                  :class="{ 'active-link': this.$route.name === 'Products' }"
+                  :class="{ 'active-link': this.$route.name === 'Products' ||this.$route.name === 'Product' }"
                   @click="this.$router.push('/products')"
                   >Koffiebonen</a
                 >
 
-                <a href="#" class="hero-link font-medium text-white"
+                <a 
+                  href="#" 
+                  class="hero-link font-medium text-white"
+                  :class="{ 'active-link': this.$route.name === 'Home' }"
                   >Over ons</a
                 >
 

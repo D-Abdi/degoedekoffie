@@ -29,7 +29,9 @@
             </div>
           </div>
           <div class="flex justify-center">
-            <button class="rounded-md border border-transparent custom-bg-secondary px-8 py-3 text-base font-medium text-white md:py-2 md:px-10 md:text-lg hero-btn">Bekijk</button>
+            <button
+              class="rounded-md border border-transparent custom-bg-secondary px-8 py-3 text-base font-medium text-white md:py-2 md:px-10 md:text-lg hero-btn"
+              @click="this.$router.push('/product')">Bekijk</button>
           </div>
         </div>
       </div>
@@ -79,7 +81,9 @@
             </div>
           </div>
           <div class="flex justify-center">
-            <button class="rounded-md border border-transparent custom-bg-secondary px-8 py-3 text-base font-medium text-white md:py-2 md:px-10 md:text-lg hero-btn">Bekijk</button>
+            <button
+              class="rounded-md border border-transparent custom-bg-secondary px-8 py-3 text-base font-medium text-white md:py-2 md:px-10 md:text-lg hero-btn"
+              @click="this.$router.push('/product')">Bekijk</button>
           </div>
         </div>
       </div>
