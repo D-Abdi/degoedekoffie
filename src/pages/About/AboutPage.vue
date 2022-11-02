@@ -5,7 +5,7 @@
       <div class="flex flex-col text-center w-full">
         <h1
           class="
-            sm:text-4xl
+            sm:text-3xl
             text-3xl
             font-medium
             title-font
@@ -121,7 +121,7 @@
           <img
             class="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src="src\assets\images\about\farm.jpg"
           />
         </div>
       </div>
@@ -143,7 +143,7 @@
           <img
             class="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src="src\assets\images\about\roast.jpg"
           />
         </div>
         <div
