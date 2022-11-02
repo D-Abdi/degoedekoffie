@@ -25,71 +25,16 @@
           </h1>
           <div class="flex mb-4">
             <span class="flex items-center">
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 custom-color-secondary"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 custom-color-secondary"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 custom-color-secondary"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 custom-color-secondary"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 custom-color-secondary"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
+              <v-template v-for="n in 5" :key="n">
+                <i
+                  class="fa-solid fa-star custom-color-secondary"
+                  v-if="n <= product?.rating"
+                ></i>
+                <i
+                  class="fa-regular fa-star custom-color-secondary"
+                  v-if="n > product?.rating"
+                ></i>
+              </v-template>
               <span class="text-gray-400 ml-3">4 Reviews</span>
             </span>
           </div>
@@ -97,14 +42,22 @@
             {{ product?.description }}
           </p>
           <div class="mb-3">
+            <h3 class="my-1 text-xl custom-color-secondary">Smaak</h3>
+            <p class="text-leading text-gray-400">{{ product?.taste }}</p>
+          </div>
+          <div class="mb-3">
             <h3 class="my-1 text-xl custom-color-secondary">Kracht</h3>
             <div>
-              <i
-                class="fa-solid fa-coffee-bean coffee-rating"
-                v-for="n in product?.strength"
-                :key="n"
-              ></i
-              >
+              <v-template v-for="n in 5" :key="n">
+                <i
+                  class="fa-solid fa-coffee-bean coffee-rating"
+                  v-if="n <= product?.strength"
+                ></i>
+                <i
+                  class="fa-solid fa-coffee-bean coffee-rating opacity-25"
+                  v-if="n > product?.strength"
+                ></i>
+              </v-template>
             </div>
           </div>
           <div
@@ -130,7 +83,7 @@
                   "
                 >
                   <option>500g</option>
-                  <option>1kg</option>
+                  <option selected="selected">1kg</option>
                   <option>2kg</option>
                   <option>5kg</option>
                   <option>10kg</option>
@@ -173,7 +126,7 @@
                 custom-color-secondary
                 mr-4
               "
-              >&euro;24,99</span
+              >&euro;{{ product?.price }}</span
             >
             <button
               class="
@@ -199,7 +152,6 @@
 </template>
 
 <script>
-import { toRaw, isProxy } from "@vue/reactivity";
 import { supabase } from "../../../supabase.js";
 
 export default {
@@ -207,6 +159,7 @@ export default {
   data() {
     return {
       product: {},
+      price: null,
     };
   },
   async beforeMount() {
@@ -219,6 +172,7 @@ export default {
       alert(error);
     } else {
       this.product = data[0];
+      this.price = this.product.price;
       console.log(this.product, "PRODUCT");
     }
   },
