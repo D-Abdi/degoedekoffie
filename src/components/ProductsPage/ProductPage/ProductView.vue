@@ -118,6 +118,8 @@
 <script>
 import { supabase } from "../../../supabase.js";
 
+import { useProductsStore } from "../../../store/ProductStore";
+
 export default {
   name: "ProductView",
   data() {
@@ -137,17 +139,9 @@ export default {
     }
   },
   async beforeMount() {
-    const { data, error } = await supabase
-      .from("products")
-      .select()
-      .eq("id", this.$route.params.id);
-
-    if (error) {
-      alert(error);
-    } else {
-      this.product = data[0];
-      this.price = this.product.price;
-    }
+    const productManager = useProductsStore();
+    const routeId = this.$route.params.id
+    this.product = productManager.products.find((product) => product.id == routeId)
   },
 };
 </script>

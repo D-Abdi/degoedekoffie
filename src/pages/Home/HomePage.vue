@@ -26,6 +26,7 @@ import Testimonial from "../../components/HomePage/Testimonial.vue";
 import Products from "../../components/HomePage/Products.vue";
 import Footer from "../../components/Global/Footer.vue";
 
+
 export default {
   name: "HomePage",
   components: {
@@ -35,6 +36,6 @@ export default {
     Testimonial,
     Products,
     Footer,
-  },
+  }
 };
 </script>
