@@ -110,7 +110,18 @@
 </template>
 
 <script>
+import { useProductsStore } from "../../store/ProductStore";
+
 export default {
   name: "ProductsGrid",
+  data() {
+    return {
+      products: [],
+    };
+  },
+  async beforeMount() {
+    const productManager = useProductsStore();                                           
+    this.products = productManager.products;
+  }
 };
 </script>

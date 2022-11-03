@@ -116,8 +116,6 @@
 </template>
 
 <script>
-import { supabase } from "../../../supabase.js";
-
 import { useProductsStore } from "../../../store/ProductStore";
 
 export default {
@@ -140,12 +138,12 @@ export default {
   },
   async beforeMount() {
     const productManager = useProductsStore();
-    const routeId = this.$route.params.id
+    const routeId = this.$route.params.id;
     if (productManager.products && productManager.products.length > 0) {  
-      this.product = productManager.products.find((product) => product.id == routeId)
+      this.product = productManager.products.find((product) => product.id == routeId);
     } else {
-      await productManager.retrieveProducts()
-      this.product = productManager.products.find((product) => product.id == routeId)
+      await productManager.retrieveProducts();
+      this.product = productManager.products.find((product) => product.id == routeId);
     }
   },
 };
