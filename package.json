@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.42.1",
     "@supabase/supabase-js": "^2.0.5",
+    "@vue-stripe/vue-stripe": "^4.4.4",
     "@vueuse/motion": "^2.0.0-beta.12",
     "daisyui": "^2.27.0",
     "dotenv": "^16.0.3",

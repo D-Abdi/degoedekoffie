@@ -117,9 +117,13 @@
 
 <script>
 import { useProductsStore } from "../../../store/ProductStore";
+import { StripeCheckout } from '@vue-stripe/vue-stripe';
 
 export default {
   name: "ProductView",
+  components: {
+    StripeCheckout
+  },
   data() {
     return {
       product: {},
@@ -141,9 +145,11 @@ export default {
     const routeId = this.$route.params.id;
     if (productManager.products && productManager.products.length > 0) {  
       this.product = productManager.products.find((product) => product.id == routeId);
+      this.price = productManager.products.find((product) => product.id == routeId).price;
     } else {
       await productManager.retrieveProducts();
       this.product = productManager.products.find((product) => product.id == routeId);
+      this.price = productManager.products.find((product) => product.id == routeId).price;
     }
   },
 };
