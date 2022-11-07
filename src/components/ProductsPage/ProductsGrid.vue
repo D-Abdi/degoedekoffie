@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import { useProductsStore } from "../../store/ProductStore";
+import { useProductsStore } from "../../stores/ProductStore";
 
 export default {
   name: "ProductsGrid",

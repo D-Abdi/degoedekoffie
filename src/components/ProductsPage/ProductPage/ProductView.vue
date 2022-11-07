@@ -25,14 +25,16 @@
           </h1>
           <div class="flex mb-4">
             <span class="flex items-center">
-              <template v-for="n in 5" :key="n">
+              <template v-for="n in 5">
                 <i
+                  :key="n"
                   class="fa-solid fa-star custom-color-secondary"
                   v-if="n <= product?.rating"
                 ></i>
                 <i
                   class="fa-regular fa-star custom-color-secondary"
                   v-if="n > product?.rating"
+                  :key="n"
                 ></i>
               </template>
               <span class="text-gray-400 ml-3">4 Reviews</span>
@@ -48,14 +50,16 @@
           <div class="mb-3">
             <h3 class="my-1 text-xl custom-color-secondary">Kracht</h3>
             <div>
-              <template v-for="n in 5" :key="n">
+              <template v-for="n in 5">
                 <i
-                  class="fa-solid fa-coffee-bean coffee-rating"
+                  :key="n"
                   v-if="n <= product?.strength"
+                  class="fa-solid fa-coffee-bean coffee-rating"
                 ></i>
                 <i
-                  class="fa-solid fa-coffee-bean coffee-rating opacity-25"
+                  :key="n"
                   v-if="n > product?.strength"
+                  class="fa-solid fa-coffee-bean coffee-rating opacity-25"
                 ></i>
               </template>
             </div>
@@ -129,15 +133,6 @@
               "
               >&euro;{{ product?.price }}</span
             >
-            <stripe-checkout
-              ref="checkoutRef"
-              mode="payment"
-              :pk="publishableKey"
-              :line-items="lineItems"
-              :success-url="successURL"
-              :cancel-url="cancelURL"
-              @loading="(v) => (loading = v)"
-            />
             <button
               class="
                 rounded-md
@@ -163,7 +158,7 @@
 </template>
 
 <script>
-import { useProductsStore } from "../../../store/ProductStore";
+import { useProductsStore } from "../../../stores/ProductStore";
 import { StripeCheckout } from "@vue-stripe/vue-stripe";
 
 export default {
@@ -183,8 +178,8 @@ export default {
           quantity: 1,
         },
       ],
-      successURL: "http://127.0.0.1:5173",
-      cancelURL: "http://127.0.0.1:5173",
+      successURL: "https://127.0.0.1:5173/",
+      cancelURL: "https://127.0.0.1:5173/",
     };
   },
   methods: {
@@ -197,8 +192,6 @@ export default {
       }
     },
     submit() {
-      console.log(this.publishableKey, "Test");
-      this.$refs.checkoutRef.redirectToCheckout();
     },
   },
   async beforeMount() {

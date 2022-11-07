@@ -1,6 +1,10 @@
 <script setup>
-import { useProductsStore } from './store/ProductStore';
+import { useProductsStore } from './stores/ProductStore';
+import { useShoppingCartStore } from './stores/ShoppingCartStore';
 const productManager = useProductsStore();
+const shoppingCartManager = useShoppingCartStore();
+
+shoppingCartManager.getCart();
 
 if (productManager.products.length === 0) {
   productManager.retrieveProducts()
