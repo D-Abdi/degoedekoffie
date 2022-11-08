@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <div class="container max-w-7xl">
+    <Navigation />
     <div class="mb-20">
       <Hero />
     </div>
