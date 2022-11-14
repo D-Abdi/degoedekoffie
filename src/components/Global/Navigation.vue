@@ -103,7 +103,7 @@
                             <h3>
                               <a href="#">{{product?.name}}</a>
                             </h3>
-                            <p class="ml-4">&euro{{product?.price}}</p>
+                            <p class="ml-4">&euro;{{product?.price}}</p>
                           </div>
                           <p class="mt-1 text-sm text-gray-500">{{product?.weight}}</p>
                         </div>
