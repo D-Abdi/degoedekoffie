@@ -1,6 +1,8 @@
 <template>
   <div class="container mx-auto max-w-7xl">
-    <Navigation />
+    <div class="mb-10">
+      <Navigation />
+    </div>
     <section class="container mx-auto">
       <div class="flex flex-col text-center w-full">
         <h1
@@ -55,13 +57,7 @@
           "
         >
           <h1
-            class="
-              title-font
-              text-3xl
-              mb-4
-              font-medium
-              custom-color-secondary
-            "
+            class="title-font text-3xl mb-4 font-medium custom-color-secondary"
           >
             Ontmoet Robin de Wolff
           </h1>
@@ -100,13 +96,7 @@
           "
         >
           <h1
-            class="
-              title-font
-              text-3xl
-              mb-4
-              font-medium
-              custom-color-secondary
-            "
+            class="title-font text-3xl mb-4 font-medium custom-color-secondary"
           >
             Een eerlijke prijs voor de boeren
           </h1>
@@ -159,13 +149,7 @@
           "
         >
           <h1
-            class="
-              title-font
-              text-3xl
-              mb-4
-              font-medium
-              custom-color-secondary
-            "
+            class="title-font text-3xl mb-4 font-medium custom-color-secondary"
           >
             Gebrand in Nederland
           </h1>

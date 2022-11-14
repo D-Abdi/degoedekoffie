@@ -1,9 +1,11 @@
 <template>
   <div class="container mx-auto max-w-7xl">
+    <div class="mb-10">
       <Navigation />
-      <ProductsTitle />
-      <ProductsGrid />
-      <Footer />
+    </div>
+    <ProductsTitle />
+    <ProductsGrid />
+    <Footer />
   </div>
 </template>
 

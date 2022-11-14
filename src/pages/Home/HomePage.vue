@@ -1,7 +1,7 @@
 <template>
   <div class="container max-w-7xl">
     <Navigation />
-    <div class="mb-20">
+    <div class="mb-+">
       <Hero />
     </div>
     <div class="mt-20">

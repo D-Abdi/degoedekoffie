@@ -146,7 +146,7 @@
                 md:py-2 md:px-6 md:text-lg
                 hero-btn
               "
-              @click="submit"
+              @click="addToCart($event)"
             >
               In winkelwagen
             </button>
@@ -159,6 +159,7 @@
 
 <script>
 import { useProductsStore } from "../../../stores/ProductStore";
+import { useShoppingCartStore } from "../../../stores/ShoppingCartStore";
 import { StripeCheckout } from "@vue-stripe/vue-stripe";
 
 export default {
@@ -172,26 +173,23 @@ export default {
       loading: false,
       product: {},
       price: null,
-      lineItems: [
-        {
-          price: "price_1M1FtkJIGo6RW88k3TlFLtjy", // The id of the one-time price you created in your Stripe dashboard
-          quantity: 1,
-        },
-      ],
-      successURL: "https://127.0.0.1:5173/",
-      cancelURL: "https://127.0.0.1:5173/",
     };
   },
   methods: {
     handleAmountSelect(event) {
       for (let target of event.target) {
         if (target.selected) {
-          this.product.price = (this.price * target.value).toFixed(2);
+          this.product.price = Number((this.price * target.value)).toFixed(2);
           return;
         }
       }
     },
-    submit() {
+    addToCart() {
+      const ShoppingCartStore = useShoppingCartStore();
+      console.log(this.product, "Event!");
+      const productCopy = JSON.parse(JSON.stringify(this.product))
+      ShoppingCartStore.addToCart(productCopy);
+      ShoppingCartStore.getCart();
     },
   },
   async beforeMount() {
