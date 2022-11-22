@@ -12,7 +12,7 @@
             object-cover object-center
             rounded
           "
-          src="../../../assets/images/coffee-bag.jpg"
+          :src="product?.image"
         />
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h2 class="text-sm title-font text-gray-400 tracking-widest">
