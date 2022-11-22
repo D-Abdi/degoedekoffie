@@ -87,11 +87,11 @@
                     pr-10
                   "
                 >
-                  <option value="0.5">500g</option>
-                  <option value="1" selected="selected">1kg</option>
-                  <option value="2">2kg</option>
-                  <option value="5">5kg</option>
-                  <option value="10">10kg</option>
+                  <option :value="0.5">500g</option>
+                  <option :value="1" selected="selected">1kg</option>
+                  <option :value="2">2kg</option>
+                  <option :value="5">5kg</option>
+                  <option :value="10">10kg</option>
                 </select>
                 <span
                   class="
@@ -167,6 +167,7 @@ export default {
   components: {
     StripeCheckout,
   },
+
   data() {
     return {
       publishableKey: import.meta.env.VITE_APP_STRIPE_PK,
@@ -175,23 +176,7 @@ export default {
       price: null,
     };
   },
-  methods: {
-    handleAmountSelect(event) {
-      for (let target of event.target) {
-        if (target.selected) {
-          this.product.price = Number((this.price * target.value)).toFixed(2);
-          return;
-        }
-      }
-    },
-    addToCart() {
-      const ShoppingCartStore = useShoppingCartStore();
-      console.log(this.product, "Event!");
-      const productCopy = JSON.parse(JSON.stringify(this.product))
-      ShoppingCartStore.addToCart(productCopy);
-      ShoppingCartStore.getCart();
-    },
-  },
+
   async beforeMount() {
     const productManager = useProductsStore();
     const routeId = this.$route.params.id;
@@ -212,5 +197,46 @@ export default {
       ).price;
     }
   },
+
+  methods: {
+    handleAmountSelect(event) {
+      for (let target of event.target) {
+        if (target.selected) {
+          this.product.price = Number(this.price * target.value).toFixed(2);
+          this.handleWeightSelection(target.value);
+          return;
+        }
+      }
+    },
+
+    handleWeightSelection(value) {
+      value = Number(value);
+      switch (value) {
+        case 0.5:
+          this.product.weight = "500 gram";
+          break;
+        case 1:
+          this.product.weight = "1 Kilo";
+          break;
+        case 2:
+          this.product.weight = "2 Kilo";
+          break;
+        case 5:
+          this.product.weight = "5 Kilo";
+          break;
+        case 10:
+          this.product.weight = "10 Kilo";
+          break;
+      }
+    },
+
+    addToCart() {
+      const ShoppingCartStore = useShoppingCartStore();
+      console.log(this.product, "Event!");
+      const productCopy = JSON.parse(JSON.stringify(this.product));
+      ShoppingCartStore.addToCart(productCopy);
+      ShoppingCartStore.getCart();
+    },
+  }
 };
 </script>
